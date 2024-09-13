@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Diversão e Adivinhação</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__conteudo" id="conteudo-jogo">
+            <div class="container__imagem">
+            </div>
+            <div class="container__informacoes">
+                <div class="container__texto">
+                    <h1>Aposte qual seu número secreto</h1>
+                    <p class="texto__paragrafo">Chute um número meu parceiro</p>
+                </div>
+                <input type="number" min="1" max="10" class="container__input" placeholder="Sua sorte estará aqui?">
+                <div class="chute container__botoes">
+                    <button onclick="verificarChute()" class="container__botao">Aposte</button>
+                    <button onclick="reiniciarJogo()" id="reiniciar" class="container__botao" disabled>Vamos de novo</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mensagem de erro -->
+        <div class="container__faustao-erro" id="faustao-erro" style="display: none;">
+            <p class="texto__erro-grande" id="texto-erro"></p>
+            <button onclick="reiniciarJogo()" id="botao-reiniciar-erro" class="container__botao">Vamos de novo</button>
+        </div>
+
+        <!-- Mensagem de acerto -->
+        <div class="container__download-certo" id="download-certo" style="display: none;">
+            <p class="texto__certo-grande" id="mensagem-certo"></p>
+            <button onclick="reiniciarJogo()" id="botao-reiniciar-certo" class="container__botao">Vamos de novo</button>
+        </div>
+    </div>
+
+    <script src="main.js" defer></script>
+
+</body>
+
+</html>
